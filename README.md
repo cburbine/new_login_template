@@ -1,2 +1,2 @@
-login_template
-==============
+new_login_template
+==================

@@ -1,4 +1,4 @@
-B0;136;0c<?php
+<?php
 include 'connect_test.php'; //connect the connection page
 
 if(empty($_SESSION)) // if the session not yet started 

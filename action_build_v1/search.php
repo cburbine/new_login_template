@@ -1,19 +1,28 @@
+<!-- 
+File: serach.php
+Author: cburbine
+Course: 91.462 - GUI II Programming
+Email: christopher_burbine@student.uml.edu
+Description: Linker file for search functions. This is the file
+that if linked from other pages. Both this page and pro_search.php
+do not have all the parts to the current search function need to be
+added.
+-->
 <!DOCTYPE html>
 <?php
-   include 'connect_test.php'; //connect the connection page
+include 'connect_test.php'; //connect the connection page
 
-   if(empty($_SESSION)){ // if the session not yet started
-     session_name('newLogin');
-     session_set_cookie_params(2*7*24*60*60);
-     session_start();
-   }
+if (empty($_SESSION)) { // if the session not yet started
+    session_name('newLogin');
+    session_set_cookie_params(2 * 7 * 24 * 60 * 60);
+    session_start();
+}
 
-   if(!isset($_SESSION['username'])) { //if not yet logged in
-     header("Location: login.php");// send to login page
-     exit;
-   }
-
- ?>
+if (!isset($_SESSION['username'])) { //if not yet logged in
+    header("Location: login.php"); // send to login page
+    exit;
+}
+?>
 <html>
     <head>
         <title>Search</title>
@@ -24,7 +33,7 @@
 
         <script src="../js/jquery-1.11.0.min.js"></script>
         <script src="../jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>-->
-	<script src="js/jquery-1.11.0.min.js"></script>
+        <script src="js/jquery-1.11.0.min.js"></script>
         <script src="jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
         <script src="js/autoComplete.js"></script>
     </head>

@@ -1,8 +1,11 @@
 <?php
 include 'connect_test.php'; //connect the connection page
 
-if(empty($_SESSION)) // if the session not yet started 
-   session_start();
+if(empty($_SESSION)){ // if the session not yet started
+  session_name('newLogin');
+  session_set_cookie_params(2*7*24*60*60);
+  session_start();
+}
 if(!isset($_POST['submit'])) { // if the form not yet submitted
    header("Location: login.php");
    exit; 
@@ -20,6 +23,7 @@ if(mysql_num_rows($query_result) == 0){
     // check if passwords are equal
     if($row_query['pass']==$_POST['password']){
       $_SESSION['username'] = $row_query['usr'];
+      $_SESSION['id'] = $row_query['id'];
       header("Location: home.php");
       exit;
       //echo "If statement reached."; 

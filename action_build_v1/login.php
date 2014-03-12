@@ -1,7 +1,9 @@
 <?php
 include 'connect_test.php'; //connect the connection page
-if(empty($_SESSION)){ // if the session not yet started 
-   session_start();
+if(empty($_SESSION)){ // if the session not yet started
+  session_name('newLogin');
+  session_set_cookie_params(2*7*24*60*60);
+  session_start();
 }
 
 if(isset($_SESSION['username'])) { // if already login

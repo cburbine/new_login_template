@@ -38,6 +38,10 @@ if (!isset($_SESSION['username'])) { //if not yet logged in
         <script src="js/autoComplete.js"></script>
     </head>
     <body>
+        <form action="home.php">
+          <input type="submit" value="Return to my Homepage">
+        </form>
+
         <form name="search" method="post" action="pro_search_v2.php">
             Search for: <input type="text" name="find" /> in
             <select name="field">

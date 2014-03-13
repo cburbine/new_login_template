@@ -35,6 +35,10 @@ if (!isset($_SESSION['username'])) { //if not yet logged in
             Re-enter New Password: <input type="password" name="re_new_password" /><br />
             <input type = "submit" name="submit" value="Change Password" />
         </form>
+        
+        <form action="search.php">
+            <input type="submit" value="Serach for Books">
+        </form>
 
         <?php
         echo '<br>';
